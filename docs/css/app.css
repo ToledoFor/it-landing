@@ -1,7 +1,7 @@
 /*!******************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/app.scss ***!
   \******************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap);
 /*!**********************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/app.scss (1) ***!
   \**********************************************************************************************************************************************************/
@@ -236,6 +236,54 @@ pre {
 */
 /* Vendor */
 /* Components */
+.btn-cta {
+  padding: 8px 34px;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+.btn-cta--primary {
+  background-color: #FFA62B;
+  border: 1px solid #FFA62B;
+  color: #fff;
+}
+.btn-cta--primary:hover {
+  background-color: transparent;
+  color: #FFA62B;
+}
+.btn-cta--primary-trasparent {
+  background-color: transparent;
+  color: #FFA62B;
+}
+.btn-cta--primary-trasparent:hover {
+  background-color: #FFA62B;
+  color: #fff;
+}
+.btn-cta--secondary {
+  background-color: #00A0C1;
+  border: 1px solid #00A0C1;
+  color: #fff;
+}
+.btn-cta--secondary:hover {
+  background-color: transparent;
+  color: #00A0C1;
+}
+.btn-cta--secondary-transparent {
+  background-color: transparent;
+  color: #00A0C1;
+}
+.btn-cta--secondary-transparent:hover {
+  background-color: #00A0C1;
+  color: #fff;
+}
+.btn-cta--rounded {
+  border-radius: 37px;
+}
+
 /* Browser specific styles */
 /**
  * Dirty hacks, yes internet explorer, we are looking at you
@@ -253,7 +301,6 @@ body {
 }
 
 .hero {
-  min-height: calc(100vh - 50px);
   background: url(../images/design/hero-background.2f97ba.jpg) no-repeat;
   background-size: cover;
 }
@@ -268,17 +315,112 @@ body {
   font-size: 24px;
   line-height: 32px;
 }
+.hero__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: calc(100vh - 50px);
+}
+@media screen and (max-width: 1024px) {
+  .hero__inner {
+    min-height: auto;
+  }
+}
 
 .hero-nav {
   margin-left: 120px;
 }
 .hero-nav__list {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .hero-nav__item {
   display: inline-block;
-  line-height: 32px;
 }
 .hero-nav__item + .hero-nav__item {
   padding-left: 20px;
+}
+@media screen and (max-width: 1024px) {
+  .hero-nav {
+    display: none;
+  }
+}
+
+.hero-cta__text {
+  margin: 35px 0;
+}
+.hero-cta h1 {
+  font-weight: 800;
+  font-size: 58px;
+  line-height: 80px;
+  letter-spacing: 0.2px;
+  color: #252B42;
+  text-transform: uppercase;
+}
+.hero-cta p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+.hero-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: 20px;
+}
+@media screen and (max-width: 1024px) {
+  .hero-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.hero-info-item {
+  background-color: #fff;
+  width: 100%;
+  padding: 35px 30px;
+  -webkit-box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+}
+.hero-info-item:not(:last-child) {
+  margin-right: 30px;
+}
+.hero-info-item__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: #252B42;
+  margin: 10px 0;
+}
+.hero-info-item__text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+@media screen and (max-width: 1024px) {
+  .hero-info-item {
+    margin-bottom: 20px;
+  }
 }
